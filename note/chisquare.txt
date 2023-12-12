@@ -1,0 +1,15 @@
+Expected Frequencies: Ini adalah matriks yang berisi frekuensi yang diharapkan untuk setiap sel dalam tabel kontingensi. Matriks ini dibuat berdasarkan distribusi independen jika hipotesis nol benar.
+
+Maksud dan kegunaan dari baris kode tersebut adalah:
+
+Melakukan Uji Chi-Square: Dengan menggunakan fungsi chi2_contingency dari pustaka scipy.stats, kode ini melakukan uji chi-square untuk independensi antara dua variabel kategorikal. Uji ini digunakan untuk menentukan apakah terdapat hubungan yang signifikan antara dua variabel tersebut.
+
+Output Variabel: Hasil uji chi-square menghasilkan beberapa nilai:
+
+chi2: Statistik uji chi-square.
+p: Nilai p-value yang menunjukkan signifikansi statistik.
+dof: Derajat kebebasan (degrees of freedom).
+expected: Matriks frekuensi yang diharapkan.
+Menggunakan Tabel Kontingensi: Input untuk fungsi chi2_contingency adalah tabel kontingensi, yang berisi distribusi frekuensi dari dua variabel kategorikal yang ingin diuji hubungannya (dalam kode ini, contingency_table).
+
+Hasil dari uji chi-square digunakan untuk menentukan apakah dua variabel kategorikal tersebut bersifat independen atau terdapat hubungan yang signifikan antara keduanya. P-value yang kecil (biasanya kurang dari tingkat signifikansi yang telah ditentukan, misalnya 0.05) dapat menyiratkan adanya hubungan yang signifikan.

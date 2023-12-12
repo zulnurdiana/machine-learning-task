@@ -1,0 +1,46 @@
+Mari kita bahas dengan lebih rinci. Normalisasi data adalah suatu proses di mana kita mengubah skala nilai-nilai fitur dalam suatu dataset sehingga memiliki skala yang seragam. Proses ini berguna terutama ketika nilai-nilai fitur memiliki skala yang berbeda-beda. Salah satu alat yang umum digunakan untuk normalisasi adalah StandardScaler dari pustaka scikit-learn.
+
+Mari kita ambil contoh: jika kita memiliki dua fitur, seperti 'Gaji' dengan nilai dalam ribuan dan 'Usia' dengan nilai antara 20 hingga 60, maka skala nilai keduanya sangat berbeda. 'Gaji' mungkin memiliki nilai ratusan ribu, sedangkan 'Usia' hanya memiliki rentang beberapa puluh. Ini dapat mempengaruhi analisis statistik dan machine learning, termasuk PCA.
+
+Principal Component Analysis (PCA) adalah metode statistik yang digunakan untuk mengidentifikasi pola dalam data. Salah satu persyaratan utama PCA adalah bahwa variabel harus memiliki skala yang seragam. Jika skala variabel berbeda-beda, maka komponen utama yang dihasilkan oleh PCA dapat lebih banyak dipengaruhi oleh variabel dengan skala besar.
+
+StandardScaler digunakan untuk membuat skala fitur-fitur dalam dataset menjadi rata-rata 0 dan deviasi standar 1. Dengan cara ini, semua fitur memiliki skala yang seragam, dan PCA dapat memberikan hasil yang lebih baik dan lebih interpretatif.
+
+Jadi, dengan menggunakan StandardScaler pada fitur-fitur sebelum melakukan PCA, kita memastikan bahwa analisis PCA tidak terpengaruh oleh perbedaan skala antar fitur, sehingga hasilnya lebih konsisten dan mudah diinterpretasikan.
+
+
+
+
+ sumbu x dan y akan mewakili komponen utama pertama dan kedua, dan setiap titik akan mewakili satu sampel data.
+
+
+
+
+
+ 
+
+
+Output tersebut adalah hasil dari transformasi PCA pada data setelah dinormalisasi. Setiap baris dalam matriks tersebut mewakili representasi data yang telah direduksi dimensinya berdasarkan dua komponen utama. Dalam kasus ini, karena Anda menggunakan n_components = 2, setiap baris memiliki dua nilai, yang masing-masing mewakili koordinat dalam ruang dimensi yang lebih rendah.
+
+Secara lebih spesifik:
+
+Kolom pertama (X_pca[:, 0]): Menunjukkan koordinat setiap sampel data pada komponen utama pertama (Principal Component 1 atau PC1).
+
+Kolom kedua (X_pca[:, 1]): Menunjukkan koordinat setiap sampel data pada komponen utama kedua (Principal Component 2 atau PC2).
+
+Jadi, setiap baris matriks tersebut adalah representasi data yang telah direduksi dimensinya. Misalnya, baris pertama [-0.55126926, -2.03091492] menunjukkan koordinat dari sampel pertama dalam ruang dimensi yang lebih rendah.
+
+Visualisasi dari hasil PCA biasanya dapat memberikan pemahaman yang lebih baik tentang struktur data dalam ruang dimensi yang lebih rendah. Jika Anda menggambarkan X_pca dalam diagram scatter plot, sumbu x dan y akan mewakili komponen utama pertama dan kedua, dan setiap titik akan mewakili satu sampel data.
+
+
+
+Setiap titik pada grafik merepresentasikan satu sampel data setelah direduksi dimensinya. Jarak dan arah relatif antar titik mencerminkan hubungan dan pola dalam data yang diambil oleh dua komponen utama.
+
+
+Jarak antar titik: Jarak antar titik mencerminkan perbedaan antar sampel data. Jika dua titik berdekatan, itu menunjukkan bahwa sampel-sampel tersebut memiliki representasi yang serupa dalam ruang dimensi yang lebih rendah.
+
+Arah: Arah relatif antar titik mencerminkan hubungan dan struktur dalam data. Titik-titik yang memiliki arah yang sama terhadap sumbu PC1 atau PC2 menunjukkan bahwa sampel-sampel tersebut memiliki kesamaan dalam hubungan antar fitur-fitur.
+
+Variansi: Komponen utama yang memiliki varians yang tinggi akan memiliki pengaruh yang lebih besar terhadap pola dalam data. Oleh karena itu, arah dan panjang sumbu PC1 dan PC2 memberikan informasi tentang kontribusi masing-masing komponen utama terhadap variasi data.
+
+Suksesnya analisis PCA dapat dinilai dari seberapa baik grafik scatter plot dapat membantu Anda mengidentifikasi pola atau kelompok dalam data. Jika titik-titik membentuk kelompok atau pola yang dapat diinterpretasikan, ini menunjukkan bahwa representasi data dalam ruang dimensi yang lebih rendah berhasil menggambarkan struktur informasi yang signifikan dari data asli.

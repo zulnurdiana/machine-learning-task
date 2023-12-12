@@ -1,0 +1,29 @@
+pearson = tipe numerik
+chisquare = tipe kategorikal
+
+
+korelasi pearson adalah korelasi yg digunakan untuk mengukur sejauh mana keterkaitan antar dua variabel terdapat rentang dari -1 hingga 1, jika 1 artinya variabel x dan y naik secara linear jika -1 variabel x naik dan y turun secara linear jika 0 tidak ada keterkaitan.
+
+metode chisquare adalah metode yg membantu kita memahami hubungan antara kedua variabel kategorikal, Pada dasarnya, metode ini digunakan untuk mengukur seberapa besar perbedaan antara frekuensi yang diharapkan dan frekuensi yang diamati dalam suatu distribusi kategorikal.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Kode ini melakukan uji Chi-Square pada tabel kontingensi yang telah dibuat sebelumnya. Hasil uji disimpan dalam beberapa variabel:
+chi2: Statistik uji Chi-Square.
+p: Nilai p (p-value) yang menunjukkan signifikansi uji.
+dof: Derajat kebebasan.
+expected: Tabel frekuensi yang diharapkan (expected frequencies).
+
+Interpretasi Output:
+
+Jika p-value < 0.05 (tingkat signifikansi yang umum digunakan), kita biasanya menyimpulkan bahwa terdapat hubungan yang signifikan antara jenis kelamin dan preferensi produk.
+Jika chi-square value besar, itu menunjukkan perbedaan yang signifikan antara distribusi yang diharapkan dan yang diamati.
+
+Jika p-value < 0.05:
+
+Artinya: Terdapat hubungan yang signifikan antara jenis kelamin dan preferensi produk.
+Penting karena: Nilai p-value kecil menunjukkan bahwa hubungan yang diamati tidak terjadi karena kebetulan.
+Jika chi-square value besar:
+
+Artinya: Ada perbedaan yang signifikan antara distribusi yang diharapkan dan yang diamati.
+Penting karena: Nilai chi-square yang besar menunjukkan bahwa data yang diamati tidak sesuai dengan harapan yang diukur.

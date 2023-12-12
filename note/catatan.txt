@@ -1,0 +1,6 @@
+pearson = mengukur derajat hubungan linear antar variabel, jika nilai 1 maka x dan y naik secara linear jika -1 maka turun
+
+chisquare = menghitung ketergantungan variabel yang tipe data nya kategorikal, semakin besar nilai x2 nya maka variabel yang diamati akan semakin ketergantungan
+
+
+PCA = digunakan untuk mereduksi dimensi dan mengambil feature penting yang terkait dengan target yang akan diolah, dan jika kamu memiliki sedikit column komputasi mu akan cepat.
