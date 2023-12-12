@@ -62,7 +62,7 @@ def calculate_posterior(new_instance, stats, prior, df):
 
 def main():
     set_pandas_display_options()
-    df = load_and_prepare_data('../dataset/weather_data.csv')
+    df = load_and_prepare_data('../dataset/Weather.csv')
     stats = calculate_stats(df)
     print_stats(stats, df)
     prior = calculate_prior(df)
